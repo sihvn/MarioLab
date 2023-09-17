@@ -13,12 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float upSpeed = 10;
     private bool onGroundState = true;
 
-    public Vector3 inGamePositionButton;
-    public Vector3 inGamePositionText;
     public GameObject resetButton;
-
-    public Vector3 gameOverPositionButton;
-    public Vector3 gameOverPositionText;
 
     // global variables
     private SpriteRenderer marioSprite;
