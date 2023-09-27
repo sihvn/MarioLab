@@ -6,17 +6,18 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Obstacles
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemies
+  - Obstacles
+  - Collider
+  - Player
   - 
   - 
   - 

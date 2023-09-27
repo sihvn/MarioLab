@@ -7,7 +7,9 @@ public class JumpOverGoomba : MonoBehaviour
 {
     public Transform enemyLocation;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText2;
     private bool onGroundState;
+
 
     [System.NonSerialized]
     public int score = 0; // we don't want this to show up in the inspector
@@ -46,6 +48,7 @@ public class JumpOverGoomba : MonoBehaviour
                 countScoreState = false;
                 score++;
                 scoreText.text = "Score: " + score.ToString();
+                scoreText2.text = "Score: " + score.ToString();
                 Debug.Log(score);
             }
         }
