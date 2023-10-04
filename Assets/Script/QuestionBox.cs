@@ -23,8 +23,6 @@ public class QuestionBox : MonoBehaviour
 
         if (spawned == false && col.gameObject.CompareTag("Player"))
         {
-            //boxAnimator.SetTrigger("IsCollided");
-            Debug.Log("test");
             boxAnimator.Play("coin-flipping");
             CoinAudio.PlayOneShot(CoinSpawned);
             spawned = true;

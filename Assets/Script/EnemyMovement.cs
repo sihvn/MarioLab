@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
     private int moveRight = -1;
     private Vector2 velocity;
 
-    public Vector3 startPosition = new Vector3(0.0f, 0.0f, 0.0f);
+    public Vector3 startPosition;
 
     private Rigidbody2D enemyBody;
 
@@ -34,8 +34,18 @@ public class EnemyMovement : MonoBehaviour
     {
         Debug.Log(other.gameObject.name);
     }
+    // void OnCollisionEnter2D(Collision2D col){
 
-    void Update()
+    // }
+    public void GameRestart()
+    {
+
+        transform.localPosition = startPosition;
+        originalX = transform.position.x;
+        moveRight = -1;
+        ComputeVelocity();
+    }
+    void MoveAnimation()
     {
         if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset)
         {// move goomba
@@ -48,5 +58,25 @@ public class EnemyMovement : MonoBehaviour
             ComputeVelocity();
             Movegoomba();
         }
+    }
+
+    void Update()
+
+    {
+        if (enemyBody != null)
+        {
+            if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset)
+            {// move goomba
+                Movegoomba();
+            }
+            else
+            {
+                // change direction
+                moveRight *= -1;
+                ComputeVelocity();
+                Movegoomba();
+            }
+        }
+
     }
 }
