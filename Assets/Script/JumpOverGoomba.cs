@@ -19,11 +19,11 @@ public class JumpOverGoomba : MonoBehaviour
     public float maxDistance;
     public LayerMask layerMask;
 
-    GameManager gameManager;
+    //GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
+        //gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -58,6 +58,7 @@ public class JumpOverGoomba : MonoBehaviour
         }
     }
 
+
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Ground")) onGroundState = true;
@@ -77,9 +78,5 @@ public class JumpOverGoomba : MonoBehaviour
             return false;
         }
     }
-    // void OnDrawGizmos()
-    // {
-    //     Gizmos.color = Color.yellow;
-    //     Gizmos.DrawCube(transform.position - transform.up * maxDistance, boxSize);
-    // }
+
 }

@@ -19,7 +19,7 @@ TagManager:
   - Obstacles
   - Collider
   - Player
-  - 
+  - Interactive
   - 
   - 
   - 
@@ -42,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2020441383
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pipes
+    uniqueID: 432085973
+    locked: 0
+  - name: Castle
+    uniqueID: 2775782729
     locked: 0

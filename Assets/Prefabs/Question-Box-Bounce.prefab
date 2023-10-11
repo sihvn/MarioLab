@@ -74,7 +74,7 @@ AudioSource:
   m_GameObject: {fileID: 742086695549872524}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8615840302300809857, guid: 176c1240a1c576445829e7849da1f986, type: 2}
   m_audioClip: {fileID: 8300000, guid: d885ffc842af744d89f7d595ffcc176a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 3986743564481275201}
   - component: {fileID: 1796968719732789065}
   - component: {fileID: 955584561012115164}
+  - component: {fileID: 1946904105977987160}
   m_Layer: 7
   m_Name: Question-Box-4
   m_TagString: Obstacles
@@ -531,7 +532,7 @@ AudioSource:
   m_GameObject: {fileID: 6790952072353331401}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8615840302300809857, guid: 176c1240a1c576445829e7849da1f986, type: 2}
   m_audioClip: {fileID: 8300000, guid: d885ffc842af744d89f7d595ffcc176a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -655,3 +656,22 @@ MonoBehaviour:
   CoinSpawned: {fileID: 8300000, guid: d885ffc842af744d89f7d595ffcc176a, type: 3}
   boxAnimator: {fileID: 438439843862021236}
   springJoint: {fileID: 6506708879147325183}
+--- !u!251 &1946904105977987160
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790952072353331401}
+  m_Enabled: 0
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1

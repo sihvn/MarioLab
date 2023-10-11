@@ -15,6 +15,11 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody2D enemyBody;
 
+    void Awake()
+    {
+        GameManager.Instance.gameRestart.AddListener(GameRestart);
+    }
+
     void Start()
     {
         enemyBody = GetComponent<Rigidbody2D>();
@@ -39,25 +44,11 @@ public class EnemyMovement : MonoBehaviour
     // }
     public void GameRestart()
     {
-
         transform.localPosition = startPosition;
         originalX = transform.position.x;
         moveRight = -1;
         ComputeVelocity();
-    }
-    void MoveAnimation()
-    {
-        if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset)
-        {// move goomba
-            Movegoomba();
-        }
-        else
-        {
-            // change direction
-            moveRight *= -1;
-            ComputeVelocity();
-            Movegoomba();
-        }
+
     }
 
     void Update()

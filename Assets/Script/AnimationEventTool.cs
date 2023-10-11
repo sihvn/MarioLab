@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AnimationEventIntTool : MonoBehaviour
+public class AnimationEventTool : MonoBehaviour
 {
-    public int parameter;
-    public UnityEvent<int> useInt;
     // Start is called before the first frame update
+    public UnityEvent use;
     void Start()
     {
 
@@ -18,11 +17,10 @@ public class AnimationEventIntTool : MonoBehaviour
     {
 
     }
-
-    public void TriggerIntEvent()
+    public void TriggerEvent()
     {
 
-        useInt.Invoke(parameter); // safe to invoke even without callbacks
+        use.Invoke(); // safe to invoke even without callbacks
 
     }
 }
